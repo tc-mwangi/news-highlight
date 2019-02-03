@@ -4,10 +4,17 @@ class Config:
   '''
   general configaration class
   '''
-  NEWS_API_BASE_URL = 'https://newsapi.org/v2/{}?apiKey={}'
+  NEWS_API_BASE_URL = 'https://newsapi.org/v2/{}?language=en&apiKey={}'
   NEWS_API_KEY = 'dfc2defa711d4fb4bd3a57b7da3c9a62'
+
+#   top-headlines?language=en
+#   NEWS_API_BASE_URL = 'https://newsapi.org/v2/{}?apiKey={}'
+#   NEWS_API_KEY = 'dfc2defa711d4fb4bd3a57b7da3c9a62'
+
+    
     
 # https://newsapi.org/v2/sources?apiKey=dfc2defa711d4fb4bd3a57b7da3c9a62
+# https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=dfc2defa711d4fb4bd3a57b7da3c9a62
     
 
 class ProdConfig(Config):

@@ -1,5 +1,5 @@
-# With it!
-> Short blurb about what your product does.
+# WithIt™
+> Keeping folks in the know with the best news sources around the globe.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
@@ -189,3 +189,25 @@ foobar.singularize('phenomena') # returns 'phenomenon'
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Behaviour Driven Development
+
+| Behaviour       | Input         | Output  |
+| :------------- |:-------------| -----:|
+| -      | - | - |
+| -     | -      |   - |
+| - | -      |    - |
+
+
+## User Stories
+
+* A user should see various news sources on the homepage.
+* A user should see all news articles from a selected news source.
+* A user should see the image, description and time that an article was created.
+* A user should be able to read the full article on the sources website.
+
+### In addition:
+
+* A user should be able to search for articles according to the source name.
+* A user should not lose news articles snippet on relaunch of the app (flask sessions).
+* A user should have a favourites section where they will be able to add their favourite news sources and store them in a browser cookie.
