@@ -1,42 +1,42 @@
-{% import 'macros.html' as macro %}
+{% extends 'base.html'%}
 
-<!-- news sources listing-->
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>WithIt News Portal</title>
 
-        <!-- fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-    </head>
 
-    <body>
-        <div id="main-page">
-            <!-- navigation section -->
-                {% block navbar %}
-                    {% include 'navbar.html' %}
-                {% endblock %}
-            <!-- end navigation section -->
+    {% block content %}
 
+        
             <!-- sources section -->
             <div id="main-section">
                 <section class="sources">
-                        <div class="news-banners">
-                            <div class="row no-gutters">
-                                <ul>
-                                    {{ macro.displaySourcesList(source_list)}}
-                                </ul>
+                    <div class="news-banners">
+                        <div class="row no-gutters">
+                            <div class="col-md-4 ftco-animate">
+                                <a href="../static/sample-images/image_1.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/image_1.jpg);">
+                                    <div class="overlay"></div>
+                                        <div class="text text-center">
+                                            <!-- <h3>Source 01</h3>
+                                            <span class="tag">Sample</span> -->
+                                            <ul>
+                                                {{ macro.displaySourcesList(source_list)}}
+                                            </ul>                                     
+                                        </div>
+                                </a>
                             </div>
+                            
                         </div>
+                    </div>
                 
                 </section>
                 <!-- end of sources section -->
             </div>
-            <!-- end of main section -->
-        </div>
-        <!-- end main age -->
-    </body>
+        
+        
+    {% endblock %}
+
+
+
+
+    
+
+    

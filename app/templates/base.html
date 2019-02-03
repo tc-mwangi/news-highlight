@@ -1,3 +1,5 @@
+{% extends 'navbar.html' %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,24 +13,57 @@
     </head>
 
     <body>
-       <!-- content block -->
-       {% block content %}
-        
-       {% endblock %}
+        <div id="main-page">
+            <!-- navigation section -->
+            {% block navbar %}
+                {% include 'navbar.html' %}
+            {% endblock %}
+            <!-- end navigation section -->
+            
+                    
+            <!-- content block -->
+             <!-- sources section -->
+             <div id="main-section">
+                    <section class="sources">
+                        <div class="news-banners">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 ftco-animate">
+                                    <a href="../static/sample-images/image_1.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/image_1.jpg);">
+                                        <div class="overlay"></div>
+                                            <div class="text text-center">
+                                                <!-- <h3>Source 01</h3>
+                                                <span class="tag">Sample</span> -->
+                                                                                  
+                                            </div>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    
+                    </section>
+                    <!-- end of sources section -->
+                </div>   
+            <!-- end of content block -->
+        </div>
     </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
