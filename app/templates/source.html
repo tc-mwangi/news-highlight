@@ -7,7 +7,8 @@
                 <span class="tag">Sample</span> -->
                 <ul>
                     {% for news_sources in sources %}
-                        <li><h3>{{ news_sources.description}}</h3></li>
+                        <li><h3>{{ news_sources.name}}</h3></li>
+                        <li><p>Go to site:{{ news_sources.url}}</p></li>
                     {% endfor %}
                 </ul>
             </div>
