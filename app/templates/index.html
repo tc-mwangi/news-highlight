@@ -1,1 +1,42 @@
-{% extends 'base.html' %}s
+{% import 'macros.html' as macro %}
+
+<!-- news sources listing-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>WithIt News Portal</title>
+
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="main-page">
+            <!-- navigation section -->
+                {% block navbar %}
+                    {% include 'navbar.html' %}
+                {% endblock %}
+            <!-- end navigation section -->
+
+            <!-- sources section -->
+            <div id="main-section">
+                <section class="sources">
+                        <div class="news-banners">
+                            <div class="row no-gutters">
+                                <ul>
+                                    {{ macro.displaySourcesList(source_list)}}
+                                </ul>
+                            </div>
+                        </div>
+                
+                </section>
+                <!-- end of sources section -->
+            </div>
+            <!-- end of main section -->
+        </div>
+        <!-- end main age -->
+    </body>

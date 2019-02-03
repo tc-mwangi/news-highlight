@@ -11,30 +11,10 @@
     </head>
 
     <body>
-        <div id="main-page">
-            <!-- navigation section -->
-                {% block navbar %}
-                    {% include 'navbar.html' %}
-                {% endblock %}
-            <!-- end navigation section -->
-
-            <!-- sources section -->
-            <div id="main-section">
-                <section class="sources">
-                        <div class="news-banners">
-                            <div class="row no-gutters">
-                                {% block source %}
-                                    {% include 'source.html' %}
-                                {% endblock %} 
-                            </div>
-                        </div>
-                   
-                </section>
-                 <!-- end of sources section -->
-            </div>
-            <!-- end of main section -->
-        </div>
-        <!-- end main age -->
+       <!-- content block -->
+       {% block content %}
+        
+       {% endblock %}
     </body>
 
 
