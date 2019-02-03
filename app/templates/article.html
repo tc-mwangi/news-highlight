@@ -7,7 +7,14 @@
             <span class="tag">Sample</span> -->
             <ul>
                 {% for news_articles in articles %}
+                    <li><h3>{{ news_articles.id}}</h3></li>
+                    <li><h3>{{ news_articles.name}}</h3></li>
                     <li><h3>{{ news_articles.title}}</h3></li>
+                    <li><h3>{{ news_articles.description}}</h3></li>
+                    <li><h3>{{ news_articles.url}}</h3></li>
+                    <img src="{{ news_articles.urlToimage }}" alt="{{ news_articles.title }} poster" class="img-responsive">
+                    <li><h3>{{ news_articles.publishedAt}}</h3></li>
+                    <li><h3>{{ news_articles.content}}</h3></li>
                 {% endfor %}
             </ul>
         </div>
