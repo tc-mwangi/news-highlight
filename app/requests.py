@@ -99,8 +99,8 @@ def process_articles(article_list):
     '''
     article_results = []
     for article_item in article_list:
-        id = article_item.get('source.id')
-        name = article_item.get('source.name')
+        id = article_item.get('source')
+        name = article_item.get('source')
         author = article_item.get('author')
         title = article_item.get('title')
         description = article_item.get('description')
