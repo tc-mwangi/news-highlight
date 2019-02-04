@@ -1,10 +1,8 @@
 <!-- displays news sources -->
-    <div class="col-md-4 ftco-animate">
+    <!-- <div class="col-md-4 ftco-animate">
         <a href="../static/sample-images/image_1.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/image_1.jpg);">
             <div class="overlay"></div>
             <div class="text text-center">
-                <!-- <h3>Source 01</h3>
-                <span class="tag">Sample</span> -->
                 <ul>
                     {% for news_sources in sources %}
                         <li><h3>{{ news_sources.name}}</h3></li>
@@ -13,10 +11,84 @@
                 </ul>
             </div>
         </a>
-    </div>
+    </div> -->
 <!-- end of news display -->
 
-sources = news_sources
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WithIt!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!-- icons -->
+		<link rel="stylesheet" href="/static/css/icomoon.css">
+		<!-- css -->
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+	<div id="withit-page">
+		<a href="#" class="js-withit-nav-toggle withit-nav-toggle"><i></i></a>
+		<aside id="withit-aside" role="complementary" class="">
+			<h1 id="withit-logo"><a href="index.html"><span class="flaticon-newspaper"></span>WithIt!</a></h1>
+			<nav id="withit-main-menu" role="navigation">
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Favourites</a></li>
+					<li><a href="">Support</a></li>
+				</ul>
+			</nav>
+
+			<div class="withit-footer">
+				<div class="d-flex justify-content-center">
+					<ul class="d-flex align-items-center">
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-facebook"></i></a></li>
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-twitter"></i></a></li>
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-instagram"></i></a></li>
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</aside>
+		<div id="withit-main">
+			<section class="ftco-section bg-light ftco-bread">
+				<div class="container">
+					<div class="row no-gutters slider-text align-items-center">
+	          <div class="col-md-9">
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> 
+	            <h1 class="mb-3 bread">News Sources</h1>
+	            <p>Here is a selection of the most reliable news sources there are in the world. 'Go to articles' to see all articles from the selected source.</p>
+	          </div>
+	        </div>
+				</div>
+			</section>
+	    <footer class="ftco-footer ftco-bg-dark ftco-section">
+	      <div class="container px-md-5">
+	        <div class="row mb-5">
+	          <div class="col-md">
+	            <div class="ftco-footer-widget mb-4 ml-md-4">
+	              <!-- <h2 class="ftco-heading-2">News Sources</h2> -->
+                  <ul class="categories" id="source-list">
+                    {% for news_sources in sources %}
+                    <li><a href="#">{{ news_sources.name}} <span>Go to articles:</span></a></li>
+                    {% endfor %}
+                    </ul>
+	            </div>
+	          </div>  
+	        </div>	        
+	        </div>
+	      </div>
+	    </footer>
+		</div>
+	</div>  
+  </body>
+</html>
+
+
    
 
   

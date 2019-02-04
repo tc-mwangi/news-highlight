@@ -28,7 +28,9 @@
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-
+  #source-list{
+    color: white!important;
+  }
 *,
 *::before,
 *::after {
@@ -8093,9 +8095,9 @@ textarea.form-control {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 5px 0; }
     .ftco-footer .categories li a {
-      color: rgba(255, 255, 255, 0.5) !important; }
+      color:  #fff!important; }
       .ftco-footer .categories li a span {
-        color: rgba(255, 255, 255, 0.8) !important; }
+        color:  #fff !important; }
 
 .footer-small-nav > li {
   display: inline-block; }
