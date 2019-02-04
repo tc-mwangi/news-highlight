@@ -19,11 +19,11 @@ def configure_request(app):
     base_url = app.config['NEWS_API_BASE_URL']
     base_url2 =app.config['NEWS_API_BASE_URL2']
 
-def get_source(sources):
+def get_source(newsarg):
     '''
     Function that gets the json response to our url request
     '''
-    get_sources_url = base_url.format(sources,api_key)
+    get_sources_url = base_url.format(newsarg,api_key)
 
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
