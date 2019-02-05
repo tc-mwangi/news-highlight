@@ -64,7 +64,7 @@
 	          <div class="col-md-9">
 	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> 
 	            <h1 class="mb-3 bread">News Sources</h1>
-	            <p>Here is a selection of the most reliable news sources there are in the world. 'Go to articles' to see all articles from the selected source.</p>
+	            <p>Here is a selection of the most reliable news sources there are in the world. 'Go to articles' to see all articles from the selected source. Select source name to go to homepage.</p>
 	          </div>
 	        </div>
 				</div>
@@ -77,7 +77,7 @@
 	              <!-- <h2 class="ftco-heading-2">News Sources</h2> -->
                   <ul class="categories" id="source-list">
                     {% for news_sources in sources %}
-                    <li><a href="#">{{ news_sources.name}} <span>Go to articles:</span></a></li>
+                    <li><a href="{{news_sources.url}}">{{ news_sources.name}} <span>Articles</span></a></li>
                     {% endfor %}
                     </ul>
 	            </div>

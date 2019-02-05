@@ -19,22 +19,20 @@ def index():
 	# Getting top news
 	news_articles = get_article('articles')
 	print(news_articles)
+	
 
 	
 	return render_template('index.html', title = title, sources = news_sources, articles = news_articles)
 
 # display articles by source
-# @main.route('/articles')
-# def get_articles(source_name):
-#     '''
-#     View function to display the search results
-#     '''
-#     movie_name_list = movie_name.split(" ")
-#     movie_name_format = "+".join(movie_name_list)
-#     searched_movies = search_movie(movie_name_format)
-#     title = f'search results for {movie_name}'
-
-#     return render_template('search.html', movies = searched_movies)
+@main.route('/sources/<int:id>')
+def show_articles(id):
+    '''
+    View articles page function that returns articles from a selected source
+    '''
+    articles = show_articles(id)
+    
+    return render_template('article.html', articles = articles)
 
 
 # search for articles according to source name

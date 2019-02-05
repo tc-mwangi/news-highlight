@@ -121,6 +121,35 @@ def process_articles(article_list):
     return article_results
 
 
+def show_articles(id):
+    '''
+    Function that gets the json response to our url request
+    '''
+    get_articles_bysource_url = base_url3.format(id, api_key)
+
+    with urllib.request.urlopen(get_articles_bysource_url) as url:
+        get_articles_bysource_data = url.read()
+        get_articles_bysource_response = json.loads(get_articles_bysource_data)
+
+        article_object = None
+
+        if get_articles_bysource_response:
+            id = get_articles_bysource_response.get('id')
+            name = get_articles_bysource_response.get('name')
+            author = get_articles_bysource_response.get('author')
+            title = get_articles_bysource_response.get('title')
+            description = get_articles_bysource_response.get('description')
+            url = get_articles_bysource_response.get('url')
+            urlToimage= get_articles_bysource_response.get('urlToimage')
+            publishedAt = get_articles_bysource_response.get('publishedAt')
+            content = get_articles_bysource_response.get('content')
+
+            article_object = Article(id, name, author, title, description, url, urlToimage, publishedAt, content)
+
+
+    return article_object
+
+
   
 
 
