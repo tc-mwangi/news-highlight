@@ -3,3 +3,5 @@ virtual/
 .DS_Store
 app/.DS_Store
 config.py
+__pycache__
+.vscode
