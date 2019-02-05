@@ -22,17 +22,20 @@ def index():
 	
 
 	
-	return render_template('index.html', title = title, sources = news_sources, articles = news_articles)
+	return render_template('index.html', title = title, sources = news_sources, articles = news_articles )
 
 # display articles by source
-@main.route('/sources/<int:id>')
-def show_articles(id):
-    '''
-    View articles page function that returns articles from a selected source
-    '''
-    articles = show_articles(id)
+@main.route('/article/<int:id>')
+def article():
+	'''
+	View articles page function that returns articles from a selected source
+	'''
+	news_articles = get_article('articles')
+	print(news_articles)
     
-    return render_template('article.html', articles = articles)
+
+    
+	return render_template('article.html', articles = news_articles)
 
 
 # search for articles according to source name

@@ -40,6 +40,7 @@
 			<nav id="withit-main-menu" role="navigation">
 				<ul>
                     <li><a href="">Home</a></li>
+                    <li><a href="">Articles</a></li>
                     <li><a href="">Search</a></li>
 					<li><a href="">Favourites</a></li>
 					<li><a href="">Support</a></li>
@@ -77,7 +78,7 @@
 	              <!-- <h2 class="ftco-heading-2">News Sources</h2> -->
                   <ul class="categories" id="source-list">
                     {% for news_sources in sources %}
-                    <li><a href="{{news_sources.url}}">{{ news_sources.name}} <span>Articles</span></a></li>
+                    <li><a href="{{news_sources.url}}">{{ news_sources.name}} <span>Homepage</span></a></li>
                     {% endfor %}
                     </ul>
 	            </div>

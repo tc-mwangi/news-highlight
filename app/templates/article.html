@@ -1,10 +1,8 @@
 <!-- displays news articles -->
-<div class="col-md-4 ftco-animate">
+<!-- <div class="col-md-4 ftco-animate">
     <a href="../static/sample-images/image_1.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/image_1.jpg);">
         <div class="overlay"></div>
         <div class="text text-center">
-            <!-- <h3>Articles 01</h3>
-            <span class="tag">Sample</span> -->
             <ul>
                 {% for news_articles in articles %}
                     <li><h3>{{ news_articles.id}}</h3></li>
@@ -19,8 +17,115 @@
             </ul>
         </div>
     </a>
-</div>
+</div> -->
+
+<!-- displays news sources -->
+    <!-- <div class="col-md-4 ftco-animate">
+        <a href="../static/sample-images/image_1.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/image_1.jpg);">
+            <div class="overlay"></div>
+            <div class="text text-center">
+                <ul>
+                    {% for news_sources in sources %}
+                        <li><h3>{{ news_sources.name}}</h3></li>
+                        <li><p>Go to site:{{ news_sources.url}}</p></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </a>
+    </div> -->
 <!-- end of news display -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WithIt!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!-- icons -->
+        <link rel="stylesheet" href="/static/css/icomoon.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!-- css -->
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+	<div id="withit-page">
+		<a href="#" class="withit-nav-toggle"><i></i></a>
+		<aside id="withit-aside" role="complementary" class="">
+            <a href=""><img src="/static/images/hip-hop.png" alt="withit-logo" width="150" height="150"></a>
+			<h1 id="withit-logo"><a href="index.html"><span class="flaticon-newspaper"></span>WithIt!</a></h1>
+			<nav id="withit-main-menu" role="navigation">
+				<ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Articles</a></li>
+					<li><a href="">Favourites</a></li>
+					<li><a href="">Support</a></li>
+				</ul>
+			</nav>
+
+			<div class="withit-footer">
+				<div class="d-flex justify-content-center">
+					<ul class="d-flex align-items-center">
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-facebook"></i></a></li>
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-twitter"></i></a></li>
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-instagram"></i></a></li>
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</aside>
+		<div id="withit-main">
+			<section class="ftco-section bg-light ftco-bread">
+				<div class="container">
+					<div class="row no-gutters slider-text align-items-center">
+	          <div class="col-md-9">
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> 
+	            <h1 class="mb-3 bread">Featured Articles</h1>
+	            <p>Here are the trending articles.</p>
+	          </div>
+	        </div>
+				</div>
+			</section>
+	    <footer class="ftco-footer ftco-bg-dark ftco-section">
+	      <div class="container px-md-5">
+	        <div class="row mb-5">
+	          <div class="col-md">
+	            <div class="ftco-footer-widget mb-4 ml-md-4">
+	              <!-- <h2 class="ftco-heading-2">News Sources</h2> -->
+                  <ul class="categories" id="source-list">
+                        <ul>
+                                {% for news_articles in articles %}
+                                    
+                                    <li><h3>{{ news_articles.name}}</h3></li>
+                                    <li><h3>{{ news_articles.title}}</h3></li>
+                                    <li><h3>{{ news_articles.description}}</h3></li>
+                                    <li><h3>{{ news_articles.url}}</h3></li>
+                                    <img src="{{ news_articles.urlToimage }}" alt="{{ news_articles.title }} poster" class="img-responsive">
+                                    <li><h3>{{ news_articles.publishedAt}}</h3></li>
+                                    <li><h3>{{ news_articles.content}}</h3></li>
+                                {% endfor %}
+                            </ul>
+                    </ul>
+	            </div>
+	          </div>  
+	        </div>	        
+	        </div>
+	      </div>
+	    </footer>
+		</div>
+	</div>  
+  </body>
+</html>
+
+
+   
+
+  
+
 
 
 
