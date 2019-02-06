@@ -15,8 +15,12 @@ def index():
 	# Getting sources
 	news_sources = get_source('sources')
 	print(news_sources)
+
+	#Getting articles
+	news_articles = get_article('articles')
+	print(news_articles)
 	
-	return render_template('index.html', title = title, sources = news_sources)
+	return render_template('index.html', title = title, sources = news_sources, articles = news_articles)
 
 
 @main.route('/article')
