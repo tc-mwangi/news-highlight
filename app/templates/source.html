@@ -1,35 +1,22 @@
-<!-- displays news sources -->
-    <!-- <div class="col-md-4 ftco-animate">
-        <a href="../static/sample-images/image_1.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(images/image_1.jpg);">
-            <div class="overlay"></div>
-            <div class="text text-center">
-                <ul>
-                    {% for news_sources in sources %}
-                        <li><h3>{{ news_sources.name}}</h3></li>
-                        <li><p>Go to site:{{ news_sources.url}}</p></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </a>
-    </div> -->
-<!-- end of news display -->
-
-
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>WithIt!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <!-- fonts -->
+     
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 
-    <!-- icons -->
-        <!-- <link rel="stylesheet" href="/static/css/icomoon.css"> -->
+  
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<!-- css --->
-    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+	
+				<link rel="stylesheet" href="/static/css/style.css">
+				<link rel="stylesheet" href="/static/css/open-iconic-bootstrap.min.css">
+				<link rel="stylesheet" href="/static/css/animate.css">
+				<link rel="stylesheet" href="/static/css/flaticon.css">
+				<link rel="stylesheet" href="/static/css/icomoon.css">
+				<link rel="stylesheet" href="/static/css/style.css">
   </head>
   <body>
 	<div id="withit-page">
@@ -55,7 +42,7 @@
 	        <div class="row mb-5">
 	          <div class="col-md">
 	            <div class="ftco-footer-widget mb-4 ml-md-4">
-	              <!-- <h2 class="ftco-heading-2">News Sources</h2> -->
+	              
                   <ul class="categories" id="source-list">
                     {% for news_sources in sources %}
                     <li><a href="{{news_sources.url}}">{{ news_sources.name}} <span>Homepage</span></a></li>
@@ -71,6 +58,199 @@
 	</div>  
   </body>
 </html>
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WithIt!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <link rel="stylesheet" href="/static/css/flaticon.css">
+    <link rel="stylesheet" href="/static/css/icomoon.css">
+		<link rel="stylesheet" href="/static/css/style.css">
+		
+  </head>
+  <body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		
+		<div id="colorlib-main">
+			<section class="ftco-section bg-light ftco-bread">
+				<div class="container">
+					<div class="row no-gutters slider-text align-items-center">
+	          <div class="col-md-9 ftco-animate">
+							<p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span>
+								<p class="breadcrumbs"><span class="mr-2"><a href="/article">Articles</a></span> 
+								<p class="breadcrumbs"><span class="mr-2"><a href="/search">Search</a></span>
+								<p class="breadcrumbs"><span class="mr-2"><a href="/favourites">Favourites</a></span>  
+								<p class="breadcrumbs"><span class="mr-2"><a href="/support">Contact</a></span> 
+	            <h1 class="mb-3 bread">Top headlines</h1>
+	            <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab explicabo hic laboriosam quam itaque deleniti autem fuga? At enim quisquam veritatis repudiandae. Commodi sint officia atque quaerat. Incidunt, sunt officia.</p> -->
+	          </div>
+	        </div>
+				</div>
+			</section>
+			<section class="ftco-section">
+	    	<div class="container">
+	    		<div class="row">
+	    			<div class="col-lg-8">
+	    				<div class="row">
+			    			<div class="col-md-6">
+			    				<div class="blog-entry ftco-animate">
+										<a href="single.html" class="img img-2" style="background-image: url(/static/images/image_1.jpg);"></a>
+	
+										<div class="text text-2 pt-2 mt-3">
+				              <h3 class="mb-2"><a href="single.html">source</a></h3>
+				              <div class="meta-wrap">
+												<p class="meta">
+				              		<span>author</span>
+				              	</p>
+			              	</div>
+											<p class="mb-4">description</p>
+											<p class="mb-2"><a href="single.html">link to article</a></p>
+				            </div>
+									</div>
+			    			</div>
+			    			
+			    			<div class="col-md-6">
+										<div class="blog-entry ftco-animate">
+											<a href="single.html" class="img img-2" style="background-image: url(/static/images/image_1.jpgimages/image_1.jpg);"></a>
+											<div class="text text-2 pt-2 mt-3">
+												<h3 class="mb-2"><a href="single.html">source</a></h3>
+												<div class="meta-wrap">
+													<p class="meta">
+														<span></span>
+													</p>
+												</div>
+												<p class="mb-4"></p>
+												<p class="mb-2"><a href="single.html"></a></p>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+											<div class="blog-entry ftco-animate">
+												<a href="single.html" class="img img-2" style="background-image: url(/static/images/image_1.jpg);"></a>
+												<div class="text text-2 pt-2 mt-3">
+													<h3 class="mb-2"><a href="single.html"></a></h3>
+													<div class="meta-wrap">
+														<p class="meta">
+															<span></span>
+														</p>
+													</div>
+													<p class="mb-4"></p>
+													<p class="mb-2"><a href="single.html"></a></p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+												<div class="blog-entry ftco-animate">
+													<a href="single.html" class="img img-2" style="background-image: url(/static/images/image_1.jpgimages/image_1.jpg);"></a>
+													<div class="text text-2 pt-2 mt-3">
+														<h3 class="mb-2"><a href="single.html"></a></h3>
+														<div class="meta-wrap">
+															<p class="meta">
+																<span></span>
+															</p>
+														</div>
+														<p class="mb-4"></p>
+														<p class="mb-2"><a href="single.html"></a></p>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+													<div class="blog-entry ftco-animate">
+														<a href="single.html" class="img img-2" style="background-image: url(/static/images/image_1.jpg);"></a>
+														<div class="text text-2 pt-2 mt-3">
+															<h3 class="mb-2"><a href="single.html"></a></h3>
+															<div class="meta-wrap">
+																<p class="meta">
+																	<span></span>
+																</p>
+															</div>
+															<p class="mb-4"></p>
+															<p class="mb-2"><a href="single.html"></a></p>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+														<div class="blog-entry ftco-animate">
+															<a href="single.html" class="img img-2" style="background-image: url(/static/images/image_1.jpg);"></a>
+															<div class="text text-2 pt-2 mt-3">
+																<h3 class="mb-2"><a href="single.html"></a></h3>
+																<div class="meta-wrap">
+																	<p class="meta">
+																		<span></span>
+																	</p>
+																</div>
+																<p class="mb-4"></p>
+																<p class="mb-2"><a href="single.html"></a></p>
+															</div>
+														</div>
+													</div>
+			    		</div>
+			    		
+			    	</div>
+	    			<div class="col-lg-4 sidebar ftco-animate bg-light">
+	            <div class="sidebar-box">
+	              <form action="#" class="search-form">
+	                <div class="form-group">
+	                  <span class="icon icon-search"></span>
+	                  <input type="text" class="form-control" placeholder="Search sources">
+	                </div>
+	              </form>
+	            </div>
+	            
+
+	            <div class="sidebar-box ftco-animate">
+	              <h3 class="sidebar-heading">News Sources</h3>
+	              <div class="block-21 mb-4 d-flex">
+	                <a class="blog-img mr-4" style="background-image: url(/static/images/image_1.jpg);"></a>
+	                <div class="text">
+	                  <h3 class="heading"><a href="#">{</a></h3>
+	                  <div class="meta">
+	                    <div><a href="#"><span class="icon-calendar"></span> </a></div>
+	                  </div>
+	                </div>
+	              </div>
+	              
+	              
+							</div>
+							
+	          </div>
+	    		</div>
+	    	</div>
+	    </section>
+	    <footer class="ftco-footer ftco-bg-dark ftco-section">
+	      <div class="container px-md-5">
+	        <div class="row mb-5">
+	          <div class="col-md">
+	            <div class="ftco-footer-widget mb-4 ml-md-4">
+	              <h2 class="ftco-heading-2">News Sources</h2>
+	              <ul class="list-unstyled categories">
+	                <li><a href="#"><span>Go to:  </span></a></li>
+	            </div>
+	          </div>
+	          
+	        </div>
+	        
+	        </div>
+	      </div>
+	    </footer>
+		</div>
+	</div>
+    
+  </body>
+</html>
+
 
 
    
