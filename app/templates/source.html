@@ -8,23 +8,23 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="/static/css/open-iconic-bootstrap.min.css">
     
-    <link rel="stylesheet" href="/static/css/flaticon.css">
+    
+    
     <link rel="stylesheet" href="/static/css/icomoon.css">
 		<link rel="stylesheet" href="/static/css/style.css">
 		
-  </head>
+	</head>
+	
   <body>
 
-	<div id="colorlib-page">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+	<div id="withit-page">
 		
-		<div id="colorlib-main">
-			<section class="ftco-section bg-light ftco-bread">
+		<div id="withit-main">
+			<section class="withitt-section bg-light withitt-bread">
 				<div class="container">
 					<div class="row no-gutters slider-text align-items-center">
-	          <div class="col-md-9 ftco-animate">
+	          <div class="col-md-9 withitt-animate">
 							<p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span>
 								<p class="breadcrumbs"><span class="mr-2"><a href="/article">Articles</a></span> 
 								<p class="breadcrumbs"><span class="mr-2"><a href="/favourites">Favourites <span>| coming soon...</span></a></span>  
@@ -35,7 +35,7 @@
 	        </div>
 				</div>
 			</section>
-			<section class="ftco-section">
+			<section class="withitt-section">
 	    	<div class="container">
 	    		<div class="row">
 	    			<div class="col-lg-8">
@@ -43,7 +43,7 @@
 								<!-- sources block -->
 								{% for news_sources in sources %}
 			    			<div class="col-md-6">
-			    				<div class="blog-entry ftco-animate">
+			    				<div class="blog-entry withitt-animate">
 										<a href="" class="img img-2" style="background-image: url(/static/images/image_1.jpg);"></a>
 										<div class="text text-2 pt-2 mt-3">
 												
@@ -51,13 +51,13 @@
 											<!-- articles block -->
 											
 				              <div class="meta-wrap">
-												<p class="meta">
-													<span>{{news_sources.language}}</span>
+												<!-- <p class="meta">
+													Country: <span>{{news_sources.country}}</span>
 													
 													
-												</p>
+												</p> -->
 												<p class="meta">
-														<span>{{news_sources.country}}</span>
+														<span>{{news_sources.language}}</span>
 													</p>
 											</div>
 											<div>
@@ -76,7 +76,7 @@
 			    		</div>
 			    		
 			    	</div>
-	    			<div class="col-lg-4 sidebar ftco-animate bg-light">
+	    			<div class="col-lg-4 sidebar bg-light">
 	            <div class="sidebar-box">
 	              <form action="#" class="search-form">
 	                <div class="form-group">
@@ -87,7 +87,7 @@
 	            </div>
 	            
 						
-	            <div class="sidebar-box ftco-animate">
+	            <div class="sidebar-box withitt-animate">
 								<h3 class="sidebar-heading">News Sources</h3>
 								<ul class="categories" id="source-list">
 										{% for news_sources in sources %}

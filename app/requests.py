@@ -21,7 +21,7 @@ def configure_request(app):
     api_key = app.config['NEWS_API_KEY']
     base_url = app.config['NEWS_API_BASE_URL']
     base_url2 = app.config['NEWS_API_BASE_URL2']
-    base_url3 = app.config['NEWS_API_BASE_URL3']
+    # base_url3 = app.config['NEWS_API_BASE_URL3']
 
 def get_source(newsarg):
     '''

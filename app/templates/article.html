@@ -1,140 +1,123 @@
-	<!DOCTYPE html>
-	<html lang="en">
-	  <head>
-		<title>WithIt!</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-	
-		<link rel="stylesheet" href="/static/css/open-iconic-bootstrap.min.css">
-		
-		<link rel="stylesheet" href="/static/css/flaticon.css">
-		<link rel="stylesheet" href="/static/css/icomoon.css">
-			<link rel="stylesheet" href="/static/css/style.css">
-			
-	  </head>
-	  <body>
-	
-		<div id="colorlib-page">
-			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-			
-			<div id="colorlib-main">
-				<section class="ftco-section bg-light ftco-bread">
-					<div class="container">
-						<div class="row no-gutters slider-text align-items-center">
-				  <div class="col-md-9 ftco-animate">
-								<p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span>
-									<p class="breadcrumbs"><span class="mr-2"><a href="/article">Articles</a></span> 
-									<p class="breadcrumbs"><span class="mr-2"><a href="/favourites">Favourites <span>| coming soon...</span></a></span>  
-									<p class="breadcrumbs"><span class="mr-2"><a href="/support">Blog <span>| coming soon...</span></a></span> 
-					<h1 class="mb-3 bread">Featured Articles</h1>
-					<!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab explicabo hic laboriosam quam itaque deleniti autem fuga? At enim quisquam veritatis repudiandae. Commodi sint officia atque quaerat. Incidunt, sunt officia.</p> -->
-				  </div>
-				</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>WithIt!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="/static/css/open-iconic-bootstrap.min.css">
+
+	<link rel="stylesheet" href="/static/css/flaticon.css">
+	<link rel="stylesheet" href="/static/css/icomoon.css">
+	<link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+
+		<div id="colorlib-main">
+			<section class="ftco-section bg-light ftco-bread">
+				<div class="container">
+					<div class="row no-gutters slider-text align-items-center">
+						<div class="col-md-9 ftco-animate">
+							<p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span>
+								<p class="breadcrumbs"><span class="mr-2"><a href="/article">Articles</a></span>
+									<p class="breadcrumbs"><span class="mr-2"><a href="/favourites">Favourites <span>| coming soon...</span></a></span>
+										<p class="breadcrumbs"><span class="mr-2"><a href="/support">Blog <span>| coming soon...</span></a></span>
+											<h1 class="mb-3 bread">Featured Articles</h1>
+											<!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab explicabo hic laboriosam quam itaque deleniti autem fuga? At enim quisquam veritatis repudiandae. Commodi sint officia atque quaerat. Incidunt, sunt officia.</p> -->
+						</div>
 					</div>
-				</section>
-				<section class="ftco-section">
+				</div>
+			</section>
+			<section class="ftco-section">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8">
 							<div class="row">
-									<!-- sources block -->
-									{% for news_articles in articles %}
+								<!-- sources block -->
+								{% for news_articles in articles %}
 								<div class="col-md-6">
 									<div class="blog-entry ftco-animate">
-											<a href="" class="img img-2" style="background-image: url(/static/images/image_1.jpg);"></a>
-											<div class="text text-2 pt-2 mt-3">
-													
-												<h3 class="mb-2"><a href=""><span>{{ news_articles.author}}</span></a></h3>
-												<!-- articles block -->
-												
-								  <div class="meta-wrap">
-													<p class="meta">
-														{{ news_articles.description}}
-														
-													</p>
-													<p class="meta">
-															<!-- <span>published at</span> -->
-														</p>
-												</div>
-												<div>
+										<a href="" class="img img-2" style="background-image: url(/static/images/image_1.jpg);"></a>
+										<div class="text text-2 pt-2 mt-3">
+
+											<h3 class="mb-2"><a href=""><span>{{ news_articles.title}}</span></a></h3>
+											<!-- articles block -->
+
+											<div class="meta-wrap">
+												<p class="meta">
+													- {{ news_articles.author}} -
+
+												</p>
+												<p class="meta">
+													{{ news_articles.content}}
+
+												</p>
+												<p class="meta">
+													<!-- <span>published at</span> -->
+												</p>
+											</div>
+											<div>
 												<!-- <p class="mb-4">description</p> -->
 												<p class="mb-2"><a href="{{ news_articles.url}}">Read Article</a></p>
 												<!-- end of articles block -->
-												
-												</div>
+
 											</div>
-											
+										</div>
+
+									</div>
+								</div>
+								{% endfor %}
+								<!-- end of articles block -->
+
+							</div>
+
+						</div>
+						<div class="col-lg-4 sidebar ftco-animate bg-light">
+							<div class="sidebar-box">
+								<form action="#" class="search-form">
+									<div class="form-group">
+										<span class="icon icon-search"></span>
+										<input type="text" class="form-control" placeholder="Search articles">
+									</div>
+								</form>
+							</div>
+
+
+							<div class="sidebar-box ftco-animate">
+								<h3 class="sidebar-heading">Trending Stories</h3>
+								<ul class="categories" id="source-list">
+									{% for news_articles in articles %}
+									<div class="block-21 mb-4 d-flex">
+										<a class="blog-img mr-4" style="background-image: url(/static/images/image_1.jpg);"></a>
+										<div class="text">
+											<h3 class="heading"><a href="">{{ news_articles.description}}</a></h3>
+											<div class="meta">
+												<div><a href="{{ news_articles.url}}"><span class="icon-calendar"></span>Read</a></div>
+											</div>
 										</div>
 									</div>
 									{% endfor %}
-									<!-- end of articles block -->
-								
+								</ul>
+
+
 							</div>
-							
+
 						</div>
-						<div class="col-lg-4 sidebar ftco-animate bg-light">
-					<div class="sidebar-box">
-					  <form action="#" class="search-form">
-						<div class="form-group">
-						  <span class="icon icon-search"></span>
-						  <input type="text" class="form-control" placeholder="Search sources">
-						</div>
-					  </form>
-					</div>
-					
-							
-					<div class="sidebar-box ftco-animate">
-									<h3 class="sidebar-heading">News Sources</h3>
-									<ul class="categories" id="source-list">
-											<!-- {% for news_sources in sources %} -->
-					  <div class="block-21 mb-4 d-flex">
-						<a class="blog-img mr-4" style="background-image: url(/static/images/image_1.jpg);"></a>
-						<div class="text">
-						  <h3 class="heading"><a href="">source name</a></h3>
-						  <div class="meta">
-							<div><a href=""><span class="icon-calendar"></span>Go</a></div>
-						  </div>
-						</div>
-									</div>
-								<!-- {% endfor %} -->
-							</ul>
-	
-	
-								</div>
-								
-				  </div>
 					</div>
 				</div>
-				</section>
-			</div>
+			</section>
 		</div>
-		
-	  </body>
-	</html>
-	
-	
-	
-	
-	
-	
-	
-	  
-	
-	
-	
-	   
-	
-	  
+	</div>
 
-   
+</body>
 
-  
-
-
-
-
-
-
+</html>
