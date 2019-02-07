@@ -5,3 +5,5 @@ app/.DS_Store
 config.py
 __pycache__
 .vscode
+PSEUDO.md
+start.sh
