@@ -7,3 +7,4 @@ __pycache__
 .vscode
 PSEUDO.md
 start.sh
+app/static/css
