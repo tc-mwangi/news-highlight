@@ -3,8 +3,8 @@ virtual/
 .DS_Store
 app/.DS_Store
 config.py
-__pycache__
+__pycache__/
 .vscode
 PSEUDO.md
 start.sh
-app/static/css
+virtual/
